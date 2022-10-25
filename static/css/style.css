@@ -1,0 +1,128 @@
+.container {
+    padding: 140px 0 0;
+}
+
+.headerBgColor {
+    background-color: #ad4739;
+}
+
+.bodyBgColor {
+    background-color: lightsteelblue;
+}
+.footerBgColor{
+    height: 65px;
+    width: 100%;
+    background-color: #94bcf3;
+    margin-top: 70px;
+}
+
+.formSearch {
+    width: 275px;
+}
+
+.formAcc {
+    margin-top: 7px;
+    color: #ffd27c;
+}
+
+.link:hover {
+    color: blue;
+    cursor: pointer;;
+}
+
+.tagsAndMemberUsers {
+    position: fixed;
+    left: calc(50% + 220px);;
+}
+
+.fontBestUsers {
+    font-weight: inherit;
+    font-size: 21px;
+    color: #ad4739;
+}
+
+.fontTags{
+    font-size: 19px;
+    font-weight:normal;
+}
+
+.test{
+    padding-bottom: 0;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: normal;
+
+    color: #ad4739;
+
+    background: #ffd27c;
+    --bs-btn-border-color: #ffd27c;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ad4739;
+    --bs-btn-hover-border-color: #ffd27c;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ffd27c;
+    --bs-btn-active-border-color: #c6724e;
+}
+
+.solidLine {
+    border: 3px solid #ffd27c;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    border-radius: 12px;
+}
+
+.avatarAcc {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgLogo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatarAcc img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.MyBtnSuccess {
+    --bs-btn-color: #ffd27c;
+    font-weight: bolder;
+    --bs-btn-border-color: #ffd27c;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ffd27c;
+    --bs-btn-hover-border-color: #ffd27c;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ffd27c;
+    --bs-btn-active-border-color: #c6724e;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #ffd27c;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #ffd27c;
+    --bs-gradient: none;
+}
+
+.question {
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    border-radius: 6px;
+    padding: 20px;
+}
