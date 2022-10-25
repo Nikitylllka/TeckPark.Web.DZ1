@@ -91,9 +91,16 @@
             </div>
             <div class="col-4 tagsAndMemberUsers ">
                 <h2>Популярные теги</h2>
-                <div class="fontTags">
-                    Дания Иран Кувейт Маврикий Никарагуа Норвегия Сальвадор Сенегал Танзания Черногория
-                </div>
+                <span class="fontTags">
+                    <a class=" link" href="#">Дания </a>
+                    <a class=" link" href="#">Иран </a>
+                    <a class="link" href="#">Кувейт </a>
+                    <a class="link" href="#">Маврикий </a>
+                    <a class="link" href="#">Никарагуа </a>
+                    <a class="link" href="#">Сальвадор </a>
+                    <a class="link" href="#">Сенегал </a>
+                    <a class=" link" href="#">Танзания </a>
+                </span>
                 <h2>Успешные пользователи
                 </h2>
                 <div class="fontBestUsers">
@@ -106,14 +113,34 @@
                     </ol>
                 </div>
             </div>
+
+            <div class="col-8">
+                <h2>Вопрос</h2>
+                <div class="question">
+                    Страница добавления вопроса (можно сделать оверлеем). Доступна только для авторизованных
+                    пользователей. В форма вводится заголовок, текст вопроса и теги, через запятую. С вопросом может
+                    быть связано не более 3 тегов. Для подсказки при выборе тега можно использовать готовый jquery
+                    плагин. Готовые django приложения для тегов использовать запрещается. При обработке формы
+                    обязательно проверка валидности данных. Если вопрос успешно добавлен - пользователя перебрасывает на
+                    страницу вопроса, если возникли ошибки - их нужно отобразить в форме.
+                </div>
+            </div>
+
+            <ul class="pagination"
+                <li class="page-item"><a class="page-link " href="#">Предыдущая</a></li>
+                <li class="page-item"><a class="page-link " href="#">1</a></li>
+                <li class="page-item"><a class="page-link " href="#">2</a></li>
+                <li class="page-item"><a class="page-link " href="#">3</a></li>
+                <li class="page-item"><a class="page-link " href="#">Следующая</a></li>
+            </ul>
         </div>
     </div>
+
     <footer class="text-end footerBgColor pe-4 pt-3 ">
         <h3>
             Копирайт Nitylllka.corp
         </h3>
     </footer>
-
 
 </main>
 </body>
