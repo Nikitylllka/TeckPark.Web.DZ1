@@ -21,7 +21,7 @@
     width: 275px;
 }
 
-.formAnswer{
+.formAnswer {
     height: 200px;
 }
 
@@ -123,6 +123,13 @@
     --bs-btn-disabled-bg: transparent;
     --bs-btn-disabled-border-color: #ffd27c;
     --bs-gradient: none;
+}
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
 }
 
 .MyBtnAnswer {
