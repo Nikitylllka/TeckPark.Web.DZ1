@@ -21,6 +21,10 @@
     width: 275px;
 }
 
+.formAnswer{
+    height: 200px;
+}
+
 .formAcc {
     margin-top: 7px;
     color: #ffd27c;
@@ -121,6 +125,25 @@
     --bs-gradient: none;
 }
 
+.MyBtnAnswer {
+    --bs-btn-color: #c6724e;
+    font-weight: bolder;
+    --bs-btn-border-color: #c6724e;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #c6724e;
+    --bs-btn-hover-border-color: #c6724e;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #c6724e;
+    --bs-btn-active-border-color: #c6724e;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #c6724e;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #c6724e;
+    --bs-gradient: none;
+}
+
+
 .question {
     background-color: #e1e4e8;
     margin-bottom: 10px;
@@ -145,6 +168,19 @@
 }
 
 .imgRate img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgUserQuestion {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgUserQuestion img {
     width: 100%;
     height: 100%;
     object-fit: cover;
