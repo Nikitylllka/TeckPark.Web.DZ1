@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" class="h-100 bodyBgColor">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sticky-footer-navbar/">
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+
+    <title>Вопросики и ответики</title>
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
+
+<header>
+    <!--     Fixed navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top headerBgColor">
+        <div class="container-fluid">
+
+            <div class="navbar-nav">
+                <div class="imgLogo">
+                    <a href="#"> </a>
+                    <img src="../static/img/logo.png" alt="">
+                </div>
+            </div>
+            <a class="navbar-brand solidLine btn " href="#">Вопросики и ответики</a>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <form class="d-flex " role="search">
+                    <input class="form-control me-2 formSearch" type="search" placeholder="Может ваш вопрос уже решен?">
+                    <button class="btn MyBtnSuccess" type="submit">Поиск!</button>
+                </form>
+            </div>
+            <div class="mb-2 mb-md-0">
+                <div class="row">
+
+                    <div class="col-4">
+                        <div class="avatarAcc">
+                            <img src="../static/img/fish.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-8 formAcc">
+                        <div class="ms-0 font-monospace">
+                            <p id="nickname" class="">Nikitylllka</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a class="nav-link link" href="#">Настройки</a>
+                                </div>
+                                <div class="col-6">
+                                    <a class="nav-link link" href="#">Выйти</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-shrink-0 bodyBgColor">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <!--    ВОПРОС!------------------------------------->
+                <div class="">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="imgUserQuestion">
+                                <img src="../static/img/spaggetti.jpg">
+                            </div>
+                            <div class="pt-2 ps-2">
+                            <span>
+                                    0
+                                <!--                                не знеюа как имеено счетчик воткнуть -->
+                                <a href="#">
+                                    <img class="imgRate" src="../static/img/like-transformed.png">
+                                </a>
+                                <a href="#">
+                                    <img class="imgRate" src="../static/img/dislike-transformed.png">
+                                </a>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <span class="link">
+                                <h4>
+                                    Страница добавления вопроса (можно сделать оверлеем).
+                                </h4>
+                            </span>
+                            <span class="h5">
+                                Доступна только для авторизованных
+                            пользователей. В форма вводится заголовок, текст вопроса и теги, через запятую. С вопросом
+                            может
+                            быть связано не более 3 тегов. Для подсказки при выборе тега можно использовать готовый
+                            jquery
+                            плагин. Готовые django приложения для тегов использовать запрещается. При обработке формы
+                            обязательно проверка валидности данных. Если вопрос успешно добавлен - пользователя
+                            перебрасывает на
+                            страницу вопроса, если возникли ошибки - их нужно отобразить в форме.
+                            </span>
+                            <p class="pt-2">
+                                Используемые теги
+                                <a class="link" href="#">Кувейт </a>
+                                <a class="link" href="#">Сенегал </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--ТЕГИ справа и пользователи ----------------------------------------------------------->
+            <div class="col-4 tagsAndMemberUsers ">
+                <h2>Популярные теги</h2>
+                <span class="fontTags">
+                    <a class=" link" href="#">Дания </a>
+                    <a class=" link" href="#">Иран </a>
+                    <a class="link" href="#">Кувейт </a>
+                    <a class="link" href="#">Маврикий </a>
+                    <a class="link" href="#">Никарагуа </a>
+                    <a class="link" href="#">Сальвадор </a>
+                    <a class="link" href="#">Сенегал </a>
+                    <a class=" link" href="#">Танзания </a>
+                </span>
+                <h2>Успешные пользователи
+                </h2>
+                <div class="fontBestUsers">
+                    <ol>
+                        <li><a class="nav-link link" href="#">Hanson</a></li>
+                        <li><a class="nav-link link" href="#">Foxy_owl</a></li>
+                        <li><a class="nav-link link" href="#">23Savage</a></li>
+                        <li><a class="nav-link link" href="#">Puppey</a></li>
+                        <li><a class="nav-link link" href="#">Mnogoznaal</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-2">
+                        <h2>Ответ</h2>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="imgLogo">
+                                <img src="../static/img/MooMoo.jpg">
+                            </div>
+                            <div class="pt-2 ps-2">
+                            <span>
+                                    0
+                                <!--                                не знеюа как имеено счетчик воткнуть -->
+                                <a href="#">
+                                    <img class="imgRate" src="../static/img/like-transformed.png">
+                                </a>
+                                <a href="#">
+                                    <img class="imgRate" src="../static/img/dislike-transformed.png">
+                                </a>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <span class="link">
+                                <h4>
+                                    Страница добавления вопроса (можно сделать оверлеем).
+                                </h4>
+                            </span>
+                            <span class="">
+                                Доступна только для авторизованных
+                            пользователей. В форма вводится заголовок, текст вопроса и теги, через запятую. С вопросом
+                            могут не помочь :)
+                            </span>
+
+                            <p class="h5 text mt-2"><input type="checkbox" name="a" value="Решение помогло!"> Решение
+                                помогло!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-2">
+                        <h2>Ответ</h2>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="imgLogo">
+                                <img src="../static/img/sadSally.jpg">
+                            </div>
+                            <div class="pt-2 ps-2">
+                            <span>
+                                    0
+                                <!--                                не знеюа как имеено счетчик воткнуть -->
+                                <a href="#">
+                                    <img class="imgRate" src="../static/img/like-transformed.png">
+                                </a>
+                                <a href="#">
+                                    <img class="imgRate" src="../static/img/dislike-transformed.png">
+                                </a>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <span class="link">
+                                <h4>
+                                    Страница добавления вопроса (можно сделать оверлеем).
+                                </h4>
+                            </span>
+                            <span class="">
+Таким образом, дальнейшее развитие различных форм деятельности создаёт предпосылки качественно новых шагов для позиций, занимаемых участниками в отношении поставленных задач? С другой стороны курс
+                                на социально-ориентированный национальный проект требует определения и уточнения направлений прогрессивного развития. С другой стороны сложившаяся структура организации играет
+                                важную роль в формировании модели развития.
+
+Соображения высшего порядка, а также повышение уровня гражданского сознания требует от нас анализа ключевых компонентов планируемого обновления? Повседневная практика показывает,
+                                что консультация с профессионалами из IT позволяет выполнить важные задачи
+                            </span>
+
+                            <p class="h5 text mt-2"><input type="checkbox" name="a" value="Решение помогло!"> Решение
+                                помогло!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8 mt-2">
+                <h2 class="mb-2">
+                    Cформулируйте свой ответ
+                </h2>
+                <form method="post">
+                     <textarea class="form-control me-2 formAnswer" name="comment"  ></textarea>
+                    <button class="btn MyBtnAnswer mt-2 mb-2" type="submit">Ответить!</button>
+                </form>
+            </div>
+
+
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link " href="#">Предыдущая</a></li>
+                <li class="page-item"><a class="page-link " href="#">1</a></li>
+                <li class="page-item"><a class="page-link " href="#">2</a></li>
+                <li class="page-item"><a class="page-link " href="#">3</a></li>
+                <li class="page-item"><a class="page-link " href="#">Следующая</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="text-end footerBgColor pe-4 pt-3 ">
+        <h3>
+            Копирайт Nitylllka.corp
+        </h3>
+    </footer>
+
+</main>
+</body>
+</html>
