@@ -125,7 +125,7 @@
     --bs-gradient: none;
 }
 input:invalid {
-  border: 2px dashed red;
+  border: 2px solid red;
 }
 
 input:valid {
