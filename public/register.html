@@ -1,186 +1,196 @@
-<!doctype html>
-<html lang="en" class="h-100 bodyBgColor">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
+{% extends 'templates/base.html' %}
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sticky-footer-navbar/">
+{#<!doctype html>#}
+{#<html lang="en" class="h-100 bodyBgColor">#}
+{#<head>#}
+{#    <meta charset="utf-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#    <meta name="description" content="">#}
+{#    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">#}
+{#    <meta name="generator" content="Hugo 0.104.2">#}
+{##}
+{#    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sticky-footer-navbar/">#}
+{##}
+{#    <link href="../static/css/bootstrap.css" rel="stylesheet">#}
+{#    <link href="sticky-footer-navbar.css" rel="stylesheet">#}
+{##}
+{#    <title>Вопросики и ответики</title>#}
+{#    <!-- Custom styles for this template -->#}
+{#    <link href="../static/css/style.css" rel="stylesheet">#}
+{#</head>#}
+{##}
+{#<header>#}
+{#    <!--     Fixed navbar-->#}
+{#    <nav class="navbar navbar-expand-md navbar-dark fixed-top headerBgColor">#}
+{#        <div class="container-fluid">#}
+{##}
+{#            <div class="navbar-nav">#}
+{#                <div class="imgLogo">#}
+{#                    <a href="#"> </a>#}
+{#                    <img src="../static/img/logo.png" alt="">#}
+{#                </div>#}
+{#            </div>#}
+{#            <a class="navbar-brand solidLine btn " href="#">Вопросики и ответики</a>#}
+{##}
+{#            <div class="collapse navbar-collapse" id="navbarCollapse">#}
+{#                <form class="d-flex " role="search">#}
+{#                    <input class="form-control me-2 formSearch" type="search" placeholder="Может ваш вопрос уже решен?">#}
+{#                    <button class="btn MyBtnSuccess" type="submit">Поиск!</button>#}
+{#                </form>#}
+{#            </div>#}
+{#            <div class="mb-2 mb-md-0">#}
+{#                <div class="row formAcc mx-3">#}
+{#                    <div class="ms-0 font-monospace">#}
+{#                        <div class="row">#}
+{#                            <div class="col-4">#}
+{#                                <a class="nav-link link" href="#">Войти</a>#}
+{#                            </div>#}
+{#                            <div class="col-8">#}
+{#                                <a class="nav-link link" href="#">Зарегистрироваться</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </nav>#}
+{#</header>#}
+{% block content %}
 
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
+    {% include 'templates/form_register.html' %}
 
-    <title>Вопросики и ответики</title>
-    <!-- Custom styles for this template -->
-    <link href="../static/css/style.css" rel="stylesheet">
-</head>
-
-<header>
-    <!--     Fixed navbar-->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top headerBgColor">
-        <div class="container-fluid">
-
-            <div class="navbar-nav">
-                <div class="imgLogo">
-                    <a href="#"> </a>
-                    <img src="../static/img/logo.png" alt="">
-                </div>
-            </div>
-            <a class="navbar-brand solidLine btn " href="#">Вопросики и ответики</a>
-
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <form class="d-flex " role="search">
-                    <input class="form-control me-2 formSearch" type="search" placeholder="Может ваш вопрос уже решен?">
-                    <button class="btn MyBtnSuccess" type="submit">Поиск!</button>
-                </form>
-            </div>
-            <div class="mb-2 mb-md-0">
-                <div class="row formAcc mx-3">
-                    <div class="ms-0 font-monospace">
-                        <div class="row">
-                            <div class="col-4">
-                                <a class="nav-link link" href="#">Войти</a>
-                            </div>
-                            <div class="col-8">
-                                <a class="nav-link link" href="#">Зарегистрироваться</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
-
-
-<main class="flex-shrink-0 bodyBgColor">
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <div class="row mb-2">
-                    <h2>Регистрация</h2>
-                </div>
-                <form class="was-validated">
-                    <span class="row">
-
-                        <div class="col-4">
-                            <h4>
-                                Логин
-                            </h4>
-                        </div>
-                        <div class="col-8  mb-4">
-                            <input class="form-control lockInputReg" required name="comment">
-                        </div>
-
-                        <div class="col-4">
-                            <h4>
-                                Почта
-                            </h4>
-                        </div>
-
-                        <div class="col-8 mb-4">
-
-                                <input  class="form-control lockInputReg" required name="comment">
-
-                        </div>
-
-                        <div class="col-4">
-                            <h4>
-                                Имя
-                            </h4>
-                        </div>
-
-                        <div class="col-8 mb-4">
-
-                                <input class="form-control lockInputReg" required name="comment">
-
-                        </div>
-
-                                                <div class="col-4">
-                            <h4>
-                                Пароль
-                            </h4>
-                        </div>
-
-                        <div class="col-8 mb-4">
-
-                                <input  class="form-control lockInputReg" required name="comment">
+{#----------------------------------------------------------------------------------------------------------#}
+{#<main class="flex-shrink-0 bodyBgColor">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-8">#}
+{#                <div class="row mb-2">#}
+{#                    <h2>Регистрация</h2>#}
+{#                </div>#}
+{#                <form class="was-validated">#}
+{#                    <span class="row">#}
+{##}
+{#                        <div class="col-4">#}
+{#                            <h4>#}
+{#                                Логин#}
+{#                            </h4>#}
+{#                        </div>#}
+{#                        <div class="col-8  mb-4">#}
+{#                            <input class="form-control lockInputReg" required name="comment">#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-4">#}
+{#                            <h4>#}
+{#                                Почта#}
+{#                            </h4>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-8 mb-4">#}
+{##}
+{#                                <input  class="form-control lockInputReg" required name="comment">#}
+{##}
+{#                        </div>#}
+{##}
+{#                        <div class="col-4">#}
+{#                            <h4>#}
+{#                                Имя#}
+{#                            </h4>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-8 mb-4">#}
+{##}
+{#                                <input class="form-control lockInputReg" required name="comment">#}
+{##}
+{#                        </div>#}
+{##}
+{#                                                <div class="col-4">#}
+{#                            <h4>#}
+{#                                Пароль#}
+{#                            </h4>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-8 mb-4">#}
+{##}
+{#                                <input  class="form-control lockInputReg" required name="comment">#}
+{##}
+{##}
+{#                        </div>#}
+{#                                                <div class="col-4">#}
+{#                            <h4>#}
+{#                                Повторите пароль#}
+{#                            </h4>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-8 mb-4">#}
+{##}
+{#                                <input class="form-control lockInputReg" required name="comment">#}
+{#                        </div>#}
+{##}
+{##}
+{#                        <div class="col-4">#}
+{#                            <h4>#}
+{#                                Загрузите аватарку#}
+{#                            </h4>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-8 mb-4">#}
+{#                        <form method="post" enctype="multipart/-data">#}
+{##}
+{#                            <input type="file" id="profile_pic" name="profile_pic"#}
+{#                                   accept=".jpg, .jpeg, .png">#}
+{##}
+{#                        </form>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-4">#}
+{##}
+{#                        </div>#}
+{#                        <div class="col-8 mb-4">#}
+{#                            <button class="btn MyBtnAnswer mt-2 mb-2" type="submit"> Зарегестрироваться!</button>#}
+{#                        </div>#}
+{##}
+{#                    </span>#}
+{#                </form>#}
+{#            </div>#}
 
 
-                        </div>
-                                                <div class="col-4">
-                            <h4>
-                                Повторите пароль
-                            </h4>
-                        </div>
+{#            <div class="col-4 tagsAndMemberUsers ">#}
+{#                <h2>Популярные теги</h2>#}
+{#                <span class="fontTags">#}
+{#                    <a class=" link" href="#">Дания </a>#}
+{#                    <a class=" link" href="#">Иран </a>#}
+{#                    <a class="link" href="#">Кувейт </a>#}
+{#                    <a class="link" href="#">Маврикий </a>#}
+{#                    <a class="link" href="#">Никарагуа </a>#}
+{#                    <a class="link" href="#">Сальвадор </a>#}
+{#                    <a class="link" href="#">Сенегал </a>#}
+{#                    <a class=" link" href="#">Танзания </a>#}
+{#                </span>#}
+{#                <h2>Успешные пользователи#}
+{#                </h2>#}
+{#                <div class="fontBestUsers">#}
+{#                    <ol>#}
+{#                        <li><a class="nav-link link" href="#">Hanson</a></li>#}
+{#                        <li><a class="nav-link link" href="#">Foxy_owl</a></li>#}
+{#                        <li><a class="nav-link link" href="#">23Savage</a></li>#}
+{#                        <li><a class="nav-link link" href="#">Puppey</a></li>#}
+{#                        <li><a class="nav-link link" href="#">Mnogoznaal</a></li>#}
+{#                    </ol>#}
+{#                </div>#}
+{#            </div>#}
 
-                        <div class="col-8 mb-4">
 
-                                <input class="form-control lockInputReg" required name="comment">
-                        </div>
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <footer class="text-end footerBgColor pe-4 pt-3 ">#}
+{#        <h3>#}
+{#            Копирайт Nitylllka.corp#}
+{#        </h3>#}
+{#    </footer>#}
+{##}
+{#</main>#}
+{#</body>#}
+{#</html>#}
 
-
-                        <div class="col-4">
-                            <h4>
-                                Загрузите аватарку
-                            </h4>
-                        </div>
-
-                        <div class="col-8 mb-4">
-                        <form method="post" enctype="multipart/-data">
-
-                            <input type="file" id="profile_pic" name="profile_pic"
-                                   accept=".jpg, .jpeg, .png">
-
-                        </form>
-                        </div>
-
-                        <div class="col-4">
-
-                        </div>
-                        <div class="col-8 mb-4">
-                            <button class="btn MyBtnAnswer mt-2 mb-2" type="submit"> Зарегестрироваться!</button>
-                        </div>
-
-                    </span>
-                </form>
-
-            </div>
-            <div class="col-4 tagsAndMemberUsers ">
-                <h2>Популярные теги</h2>
-                <span class="fontTags">
-                    <a class=" link" href="#">Дания </a>
-                    <a class=" link" href="#">Иран </a>
-                    <a class="link" href="#">Кувейт </a>
-                    <a class="link" href="#">Маврикий </a>
-                    <a class="link" href="#">Никарагуа </a>
-                    <a class="link" href="#">Сальвадор </a>
-                    <a class="link" href="#">Сенегал </a>
-                    <a class=" link" href="#">Танзания </a>
-                </span>
-                <h2>Успешные пользователи
-                </h2>
-                <div class="fontBestUsers">
-                    <ol>
-                        <li><a class="nav-link link" href="#">Hanson</a></li>
-                        <li><a class="nav-link link" href="#">Foxy_owl</a></li>
-                        <li><a class="nav-link link" href="#">23Savage</a></li>
-                        <li><a class="nav-link link" href="#">Puppey</a></li>
-                        <li><a class="nav-link link" href="#">Mnogoznaal</a></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="text-end footerBgColor pe-4 pt-3 ">
-        <h3>
-            Копирайт Nitylllka.corp
-        </h3>
-    </footer>
-
-</main>
-</body>
-</html>
+{% endblock %}

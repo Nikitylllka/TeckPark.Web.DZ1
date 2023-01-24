@@ -1,0 +1,47 @@
+{% load static %}
+
+   <div class="col-12">
+        <div class="row">
+            <div class="col-2">
+                <h2>Ответ</h2>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="row">
+                <div class="col-2">
+                    <div class="imgLogo">
+                        <img src="{% static "/img/MooMoo.jpg" %}">
+                    </div>
+                    <div class="pt-2 ps-2">
+                            <span>
+                                    0
+                                <!--                                не знеюа как имеено счетчик воткнуть -->
+                                <a href="#">
+                                    <img class="imgRate" src="{% static "/img/like-transformed.png" %}">
+                                </a>
+                                <a href="#">
+                                    <img class="imgRate" src="{% static "/img/dislike-transformed.png" %}">
+                                </a>
+                            </span>
+                    </div>
+                </div>
+                <div class="col-10">
+                            <span class="link">
+                                <h4>
+                                    Страница добавления вопроса (можно сделать оверлеем).
+                                </h4>
+                            </span>
+                    <span class="">
+                                Доступна только для авторизованных
+                            пользователей. В форма вводится заголовок, текст вопроса и теги, через запятую. С вопросом
+                            могут не помочь :)
+                            </span>
+
+                    <p class="h5 text mt-2"><input type="checkbox" name="a" value="Решение помогло!">
+                        Решение
+                        помогло!</p>
+                </div>
+            </div>
+        </div>
+    </div>
