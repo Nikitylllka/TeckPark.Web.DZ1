@@ -1,4 +1,6 @@
 Используемые теги
-{% for tag in question.tags %}
-    <a class="link" href="#"> {{ tag }} </a>
-{% endfor %}
+{#{% for tag in question.tags %}#}
+{#    <a class="link" href="#"> {{ tag }} </a>#}
+{#{% endfor %}#}
+
+{{ question.tags }}
