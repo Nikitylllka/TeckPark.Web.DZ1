@@ -6,6 +6,7 @@ from app import models
 
 
 class Command(BaseCommand):
+    help = 'Displays current time'
 
     def add_arguments(self, parser):
         parser.add_argument('ratio', type=int, help=u'ratio')
@@ -13,18 +14,22 @@ class Command(BaseCommand):
     def gen_tags(self, ratio):
         fake = Faker()
         models.Tag.objects.bulk_create(
-            [models.Tag(name=get_random_string(length=10))]
+            [models.Tag(name=get_random_string(10)) for i in range(ratio)]
         )
 
     def gen_profiles(self, ratio):
         fake = Faker()
-        models.Profile.objects.bulk_create(
-            [models.Profile(user=models.User.objects.create_user(username=fake.name(),
-                                                                 email=fake.email(),
-                                                                 password=fake.word())
-                            ) for i in range(ratio)]
-        )
-
+        # models.Profile.objects.bulk_create(
+        #     [models.Profile(username=fake.name(),
+        #                          email=fake.email(),
+        #                          password=fake.word()
+        #                     ) for i in range(ratio)]
+        # )
+        for i in range(ratio):
+            models.Profile.objects.create(username=fake.name(),
+                           email=fake.email(),
+                           password=fake.word()
+                           ).save()
     def gen_random_text(self):
         rand_text = str()
         for j in range(random.randint(0, 100)):
@@ -54,9 +59,10 @@ class Command(BaseCommand):
         profile_objs = models.Profile.objects.all()
         models.Answer.objects.bulk_create(
             [models.Answer(text=fake.text(),
-                           user=profile_objs[random.randint(0, profile_objs.count() - 1)],
-                           question=question_objs[random.randint(0, question_objs.count() - 1)]) for i in range(ratio)]
+                          user=profile_objs[random.randint(0, profile_objs.count() - 1)],
+                          question=question_objs[random.randint(0, question_objs.count() - 1)]) for i in range(ratio)]
         )
+
 
     def gen_likes(self, ratio):
         question_objs = models.Question.objects.all()
@@ -75,7 +81,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         ratio = kwargs['ratio']
 
-        self.gen_tags(ratio)
+        self.gen_tags(ratio * 10)
         self.gen_profiles(ratio)
         self.gen_questions(ratio * 10)
         self.gen_answers(ratio * 100)
